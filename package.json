@@ -1,0 +1,44 @@
+{
+  "name": "node_testes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-integration": "NODE_ENV=test mocha --no-deprecation --opts src/test/integration/mocha.opts src/test/integration/*.js",
+    "test-unit": "NODE_ENV=test mocha --no-deprecation --opts src/test/unit/mocha.opts src/test/unit/**/*.js",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cauarezendev/node_testes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cauarezendev/node_testes/issues"
+  },
+  "homepage": "https://github.com/cauarezendev/node_testes#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "sequelize": "^4.42.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "mocha": "^5.2.0",
+    "supertest": "^3.4.2",
+    "testdouble": "^3.9.3"
+  }
+}
